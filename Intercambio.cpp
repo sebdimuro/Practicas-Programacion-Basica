@@ -16,14 +16,14 @@ que los valores se hayan cruzado.
 
 //Usamos en este caso &x y &y como nuestro alias para nuestro variables originales a y b
 
-void intercambiar(int &x, int &y){
+void intercambiar(int *x, int *y){
 
     //Asignamos el alias/mote a la variable original 
     // y accedemos a su dirección de memoria modificando su valor
 
-    int temp = x; 
-    x = y;
-    y = temp;
+    int temp = *x; 
+    *x = *y;
+    *y = temp;
 }
 using namespace std;
 int main(){
@@ -34,7 +34,7 @@ int main(){
 
     cout<<"Valor Original de b: "<<b<<endl; //Muestra al usuario el valor original de b
 
-    intercambiar(a,b);
+    intercambiar(&a,&b);
 
     cout<<"Valor Modificado de a: "<<a<<endl; //Muestra al usuario el valor modificado de a
 
