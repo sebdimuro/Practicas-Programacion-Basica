@@ -33,29 +33,18 @@ void consonantes(char frase[]){
     int contador = 0;
 
     for(int i=0; i<longitud; i++){
+        char c = tolower(frase[i]);
 
-        if( frase[i] == 'B' || frase[i] == 'C' || frase[i] == 'D' || 
-            frase[i] == 'F' || frase[i] == 'G' || frase[i] == 'H' || 
-            frase[i] == 'J' || frase[i] == 'K' || frase[i] == 'L' ||
-            frase[i] == 'M' || frase[i] == 'N' || frase[i] == 'P' ||
-            frase[i] == 'Q' || frase[i] == 'R' || frase[i] == 'S' ||
-            frase[i] == 'T' || frase[i] == 'V' || frase[i] == 'W' ||
-            frase[i] == 'X' || frase[i] == 'Y' || frase[i] == 'Z' ){
-                contador++;
-        }
-
-        else if(frase[i] == 'b' || frase[i] == 'c' || frase[i] == 'd' || 
-            frase[i] == 'f' || frase[i] == 'g' || frase[i] == 'h' || 
-            frase[i] == 'j' || frase[i] == 'k' || frase[i] == 'l' ||
-            frase[i] == 'm' || frase[i] == 'n' || frase[i] == 'p' ||
-            frase[i] == 'q' || frase[i] == 'r' || frase[i] == 's' ||
-            frase[i] == 't' || frase[i] == 'v' || frase[i] == 'w' ||
-            frase[i] == 'x' || frase[i] == 'y' || frase[i] == 'z'){
+        if( c == 'b' || c == 'c' || c == 'd' || c == 'f' || c == 'g' || 
+            c == 'h' || c == 'j' || c == 'k' || c == 'l' || c == 'm' || 
+            c == 'n' || c == 'p' || c == 'q' || c == 'r' || c == 's' || 
+            c == 't' || c == 'v' || c == 'w' || c == 'x' || c == 'y' || 
+            c == 'z'){
                 contador++;
             }
     }
     cout<<"El numero de consonantes que tiene la frase es: ";
-    cout<<contador<<endl;
+    cout<<contador;
 }
 int main(){
 
